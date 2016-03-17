@@ -93,7 +93,7 @@ function frshblumz_content_width() {
 add_action( 'after_setup_theme', 'frshblumz_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget area to the page width size.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -111,7 +111,7 @@ function frshblumz_widgets_init() {
 add_action( 'widgets_init', 'frshblumz_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue scripts and styles with the child theme.
  */
 function frshblumz_scripts() {
 	wp_enqueue_style( 'frshblumz-style', get_stylesheet_uri() );
@@ -127,26 +127,26 @@ function frshblumz_scripts() {
 add_action( 'wp_enqueue_scripts', 'frshblumz_scripts' );
 
 /**
- * Implement the Custom Header feature.
+ * Implement the Custom Header feature it should be modifiable.
  */
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Custom template tags for this theme.
+ * Custom template tags for this theme are in the repository.
  */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates.
+ * Custom functions that act independently of the theme templates which have been designed.
  */
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions.
+ * Customizer additions to be at the very top.
  */
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Load Jetpack compatibility file.
+ * Load Jetpack to the compatibility file which is in the root folder.
  */
 require get_template_directory() . '/inc/jetpack.php';
