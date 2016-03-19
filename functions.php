@@ -93,7 +93,7 @@ function frshblumz_content_width() {
 add_action( 'after_setup_theme', 'frshblumz_content_width', 0 );
 
 /**
- * Register widget area to the page width size.
+ * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -111,7 +111,7 @@ function frshblumz_widgets_init() {
 add_action( 'widgets_init', 'frshblumz_widgets_init' );
 
 /**
- * Enqueue scripts and styles with the child theme.
+ * Enqueue scripts and styles.
  */
 function frshblumz_scripts() {
 	wp_enqueue_style( 'frshblumz-style', get_stylesheet_uri() );
@@ -127,26 +127,44 @@ function frshblumz_scripts() {
 add_action( 'wp_enqueue_scripts', 'frshblumz_scripts' );
 
 /**
- * Implement the Custom Header feature it should be modifiable.
+ * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Custom template tags for this theme are in the repository.
+ * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates which have been designed.
+ * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions to be at the very top.
+ * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Load Jetpack to the compatibility file which is in the root folder.
+ * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
+/*this function creates a flexslider on the home page, retrieved from http://flexslider.woothemes.com */
+wp_enqueue_script( 'frshblumz-flexslider', get_stylesheet_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '2.6.0', true );
+wp_enqueue_script( 'frshblumz-flexslider.js', get_stylesheet_directory_uri() . '/js/flexslider.js', array('jquery'), '1.0', true );
+// Enqueue Flexslider Files
+ 
+    function wptuts_slider_scripts() {
+        wp_enqueue_script( 'jquery' );
+ 
+        wp_enqueue_style( 'flex-style', get_template_directory_uri() . '/inc/slider/css/flexslider.css' );
+ 
+        wp_enqueue_script( 'flex-script', get_template_directory_uri() .  '/frshblumz/js/jquery.flexslider-min.js', array( 'jquery' ), false, true );
+    }
+    add_action( 'wp_enqueue_scripts', 'wptuts_slider_scripts' );
+
