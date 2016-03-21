@@ -7,6 +7,9 @@
  * @package frshblumz
  */
 
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 100, 100);
+
 if ( ! function_exists( 'frshblumz_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -153,7 +156,6 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 
-
 /*this function creates a flexslider on the home page, retrieved from http://flexslider.woothemes.com */
 wp_enqueue_script( 'frshblumz-flexslider', get_stylesheet_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '2.6.0', true );
 wp_enqueue_script( 'frshblumz-flexslider.js', get_stylesheet_directory_uri() . '/js/flexslider.js', array('jquery'), '1.0', true );
@@ -167,4 +169,3 @@ wp_enqueue_script( 'frshblumz-flexslider.js', get_stylesheet_directory_uri() . '
         wp_enqueue_script( 'flex-script', get_template_directory_uri() .  '/frshblumz/js/jquery.flexslider-min.js', array( 'jquery' ), false, true );
     }
     add_action( 'wp_enqueue_scripts', 'wptuts_slider_scripts' );
-
