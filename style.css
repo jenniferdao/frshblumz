@@ -11,7 +11,7 @@ Text Domain: teampanda
 Domain Path: /language/
 Tags: custom-header, custom-background, responsive-layout
 
-This theme, like WordPress, is licensed under the GPL.
+This theme, like Wordiess, is licensed under the GPL.
 
 teampanda is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
@@ -56,6 +56,11 @@ html {
 
 body {
 	margin: 0;
+	background-image: url("images/floralpattern.jgp");
+}
+
+#content {
+padding-left: 20px;
 }
 
 article,
@@ -386,6 +391,7 @@ ol {
 
 ul {
 	list-style: disc;
+	
 }
 
 ol {
@@ -495,14 +501,20 @@ a:active {
 5.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-    position: relative;
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    z-index: 2000;
     float: left;
     width: 100%;
     display: block;
     clear: both;
-    font-family: 'The Girl Next Door', cursive;
+    font-family: 'Palatino Linotype';
     text-transform: uppercase;
-    background: #ff4d94;
+    background: #bdbdbd;
+    margin: auto;
+    text-align:$startSide;
+    
 }
 .main-navigation ul {
     list-style: none;
@@ -524,7 +536,7 @@ a:active {
     color: hsl(0, 0%, 100%);
 }
 .main-navigation ul ul {
-    position: absolute;
+    position: fixed;
     left: 0;
     z-index: 99999;
     display: none;
@@ -576,6 +588,11 @@ a:active {
     color: hsl(0, 0%, 100%);
     background: #FFCCCC;
 } 
+
+#primary-menu.menu {
+text-align: center;
+}
+
     
 /* Small menu. */
 .menu-toggle {
@@ -746,9 +763,20 @@ a:active {
 /*--------------------------------------------------------------
 9.0 Header
 --------------------------------------------------------------*/
+#masthead {
+position: fixed;
+top: 10;
+right: 0px;
+left: 0px;
+z-index:2000;
+
+
+     }
+
 .header-image img {
 	display: block;
 	margin: 0 auto;
+	
 }
 
 .header-background-image {
@@ -768,18 +796,19 @@ a:active {
 .site-branding {
     text-align: center;
     background: #aaff80;
+    
 }
 
 
 .title-box {
     width: 600px;
     max-width: 75%;
-    padding: 4rem;
     margin: 0 auto;
     border: solid 1px #fff;
     border: solid 1px hsla(0, 0%, 100%, .3);
+    
+    
 }
-
 
 .site-title {
 
@@ -789,6 +818,7 @@ a:active {
     font-weight: 100;
     font-size: 20px;
     font-size: 2rem;
+    
 }
 
                     
@@ -862,7 +892,7 @@ input[type="search"] {
 .error404 .search-submit,
 .search .search-submit,
 .search-box .search-submit { 
-    display: none; 
+    display: inline; 
 }
            
 
@@ -873,7 +903,6 @@ input[type="search"] {
     .title-box {
         max-width: 100%;
         margin: 0;
-        padding: 4rem;
         border: none;
     }
 }
@@ -1134,3 +1163,61 @@ object {
     text-align: center; 
 }
 
+ul#primary-menu.menu.nav-menu {
+text-align: center; 
+}
+
+#menu-main-items.menu-items {
+	display: in-line;
+	margin: auto; 
+	text-align: center;
+	}
+
+/* code for making the grid layout, taken code from codex online */
+
+#gridcontainer {
+margin: 20px 0; 
+width: 20%; 
+}
+
+#gridcontainer h2 a {
+color: #77787a; font-size: 13px;
+}
+
+#gridcontainer .griditemleft {
+float: left; 
+width: 1500px; 
+margin: 0 20px 20px 0;
+border-bottom-width: 5px;
+border-top-width: 5px;
+
+}
+
+#gridcontainer .griditemright {
+float: left; 
+width: 1500px;
+border-bottom-width: 5px;
+border-top-width: 5px;
+
+}
+
+#gridcontainer .postimage {
+margin: 0 0 10px 0;
+}
+
+.attachment-category-thumbnail.size-category-thumbnail.wp-post-image
+{
+max-width: 20%;
+}
+
+
+.container {
+float: none;
+display: inline-block;
+width: 100%;
+}
+
+.flex-active-slide {
+margin-left: -10px
+
+}
