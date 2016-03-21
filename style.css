@@ -56,7 +56,6 @@ html {
 
 body {
 	margin: 0;
-	background-image: url("images/floralpattern.jpg");
 }
 
 #content {
@@ -279,24 +278,24 @@ input,
 select,
 textarea {
 	color: black; 
-	font-family: 'Mate', serif;
+	font-family: 'Century Gothic', san-serif;
 	font-size: 13x;
 }
 h1 {
-	font-size: 30px;
-font-family: 'Mate', serif;
+	font-size: 10px;
+	font-family: 'Century Gothic', sans-serif;
 	}
-
-
-h2,
+h2 .widget-title{
+	font-size: 10px;
+}
+}
 h3,
 h4,
 h5,
 h6 {
 	clear: right; 
-    font-weight: 1100;
+	font-weight: 1100;
 	font-family: 'Mate', serif;
-    color: black;
 }
 p {
 	margin-bottom: 1.5em;
@@ -362,7 +361,11 @@ html {
 
 /* This is the default colour for the background of the body if there is no custom colour defined */
 body {
-	background: #fff; 
+    background: #FAFAFA; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FAFAFA, #D8D8D8); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FAFAFA, #D8D8D8); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FAFAFA, #D8D8D8); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FAFAFA, #D8D8D8); /* Standard syntax */
 }
 
 blockquote:before,
@@ -505,15 +508,15 @@ a:active {
     right: 0px;
     left: 0px;
     z-index: 2000;
-    float: left;
+    z-index: 2000;
+    float: none;
     width: 100%;
     display: block;
     clear: both;
-    font-family: 'Palatino Linotype';
+    font-family: 'Century Gothic', sans-serif;
     text-transform: uppercase;
-    background: #bdbdbd;
-    margin: auto;
-    text-align:$startSide;
+    background: #e52356;
+    margin: auto;    
     
 }
 .main-navigation ul {
@@ -528,9 +531,9 @@ a:active {
 .main-navigation a {
     display: inline-block;
     padding: 0.6em 0.6em;
-    font-size: 13px;
-    font-size: 1.3rem;
-    text-decoration: none;
+    font-size: 10px;
+    font-size: 1.0rem;
+    text-decoration: bold;
     line-height: 1em;
     color: white;
     color: hsl(0, 0%, 100%);
@@ -542,7 +545,7 @@ a:active {
     display: none;
     float: left;
     padding: 0;
-    background: #FF6666;
+    background: #e52356;
 }
 .main-navigation ul ul ul {
     left: 100%;
@@ -556,14 +559,16 @@ a:active {
 .main-navigation li:hover > a {
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #FFCCCC;
-
+    background: #e52356;
+    -webkit-transition-duration: 0.8s;
+/* Retrieved code from w3schools.com */
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .main-navigation ul ul :hover > a {
 }
 .main-navigation ul ul a:hover {
-    background: #FFCCCC;
-
+   background: #97cb0e;
 }
 .main-navigation ul li:hover > ul {
     display: block;
@@ -572,13 +577,13 @@ a:active {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_item > a:hover,
 .main-navigation .current-menu-item > a:hover {
-    background: #e5dcef;
+    background: #97cb0e;
     color: #FFCCCC;
     color: hsl(0, 0%, 19%);
 }
 
 .main-navigation .current_page_ancestor {
-    background: #FFCCCC;
+    background: #97cb0e;
     background: hsl(0, 0%, 30%);
 }
 
@@ -586,7 +591,7 @@ a:active {
 .main-navigation .current_page_parent .current_page_item > a {
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #FFCCCC;
+    background: #97cb0e;
 } 
 
 #primary-menu.menu {
@@ -769,9 +774,7 @@ top: 10;
 right: 0px;
 left: 0px;
 z-index:2000;
-
-
-     }
+}
 
 .header-image img {
 	display: block;
@@ -795,7 +798,7 @@ z-index:2000;
 */
 .site-branding {
     text-align: center;
-    background: #aaff80;
+    background: #FAFAFA;
     
 }
 
@@ -914,20 +917,20 @@ input[type="search"] {
 --------------------------------------------------------------*/
 .widget {
     margin: 0 0 4em;
-    font-family: 'Ruluko', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
     font-size: 13px;
     font-size: 1.3rem;
 }
 
 .widget-title {
     margin-bottom: 0.5em;    
-    font-size: 20px;
-    font-size: 2.0rem;
+    font-size: 12px;
+    font-size: 1.2rem;
     border-bottom: 1px solid #000;    
 }
 
 .widget a {
-    font-weight: 700;
+    font-weight: 500;
     color: #000;
     color: hsl(0, 0%, 0%);
 }
@@ -1142,17 +1145,14 @@ object {
 /*--------------------------------------------------------------
  14.0 Footer
 --------------------------------------------------------------*/
-
 .site-footer {
-    padding: 0.6em;
-    font-family: "Ruluko", sans-serif;
-    font-size: 14px;
-    font-size: 1.4rem;
+    padding: 0.5em;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 10px;
+    font-size: 1.0rem;
     color: #fff;
     color: hsl(0, 0%, 100%);
-    background: #FF9999;
-
-}
+    background: #e52356;
 
 .site-footer a {
     color: #fff;
