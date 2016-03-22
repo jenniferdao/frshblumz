@@ -63,9 +63,6 @@ padding-left: 20px;
 background-image: url("images/floralpattern.jpg");
 }
 
-
-}
-
 article,
 aside,
 details,
@@ -802,9 +799,6 @@ z-index:2000;
     border: solid 1px hsla(0, 0%, 100%, .3);
 }
 
-.site-title {
-
-}
 
 .site-description {
     font-weight: 100;
@@ -812,7 +806,6 @@ z-index:2000;
     font-size: 1rem;  
 }
 
-                    
 .site-branding a { 
     text-decoration: none; 
 }
