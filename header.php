@@ -52,16 +52,16 @@
 
   <ul class="slides" style="">
     <li>
-      <img src="http://i.imgur.com/AULaR5H.jpg" />
+      <img src="http://phoenix.sheridanc.on.ca/~ccit3430/wp-content/uploads/2016/03/bnr6.jpg" />
     </li>
     <li>
-      <img src="http://i.imgur.com/5Jtb54h.jpg" />
+      <img src="http://phoenix.sheridanc.on.ca/~ccit3430/wp-content/uploads/2016/03/bnr5.jpg" />
     </li>
     <li>
-      <img src="http://i.imgur.com/ZctwfL2.jpg" />
+      <img src="http://phoenix.sheridanc.on.ca/~ccit3430/wp-content/uploads/2016/03/bnr10.jpg" />
     </li>
     <li>
-      <img src="http://i.imgur.com/JGL2I8a.jpg" />
+      <img src="http://phoenix.sheridanc.on.ca/~ccit3430/wp-content/uploads/2016/03/bnr8.jpg" />
     </li>
   </ul>
 </div>
@@ -84,4 +84,4 @@ window.onload = function () {
 ?>
 
 	<div id="content" class="site-content">
-    
+<?php ?>
