@@ -52,16 +52,16 @@
 
   <ul class="slides" style="">
     <li>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Flower_Bouquet.jpg" />
+      <img src="http://i.imgur.com/AULaR5H.jpg" />
     </li>
     <li>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Flower_bouquet20091225.JPG" />
+      <img src="http://i.imgur.com/5Jtb54h.jpg" />
     </li>
     <li>
-      <img src= ("images/orangeflowers.jpg") />
+      <img src="http://i.imgur.com/ZctwfL2.jpg" />
     </li>
     <li>
-      <img src="https://flic.kr/p/otgGuL" />
+      <img src="http://i.imgur.com/JGL2I8a.jpg" />
     </li>
   </ul>
 </div>
