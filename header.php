@@ -13,21 +13,6 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-<link rel="stylesheet" href="flexslider.css" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="jquery.flexslider.js"></script>
-
-
-<script type="text/javascript" charset="utf-8">
-  $(window).load(function() {
-    $('.flexslider').flexslider(); ({
-    animation: "slide",
-    controlsContainer: ".flex-container"
-    });
-  });
-</script>
-
-
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -36,7 +21,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="width=100%; overflow-x:hidden;">
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'frshblumz' ); ?></a>
 
@@ -44,7 +29,7 @@
 		<div class="site-branding">
 			<a class="site-branding" href="https://phoenix.sheridanc.on.ca/~ccit3430/" rel="home">
 			<img class="logo" src="https://phoenix.sheridanc.on.ca/~ccit3430/wp-content/themes/frshblumz/images/frshblumzlogofinal.png">
-			</a>
+</a>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
@@ -55,27 +40,40 @@
 			
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
+<div class="spacer" style=" width: 100%;height: 212px;">
+    &nbsp;
+</div>    
 <?php 
 	if ( is_home() && is_front_page() ){
 ?>			
 
-<div class="flexslider" style="width:100%;">
-  <ul class="slides">
+
+<div class="flexslider" id="slider1" style="margin-left:-72px;">
+
+  <ul class="slides" style="">
     <li>
-      <img src="https://i.imgur.com/zZhe8MN.png" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Flower_Bouquet.jpg" />
     </li>
     <li>
-      <img src="https://i.imgur.com/W3jzacf.png" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Flower_bouquet20091225.JPG" />
     </li>
     <li>
-      <img src="https://i.imgur.com/Qbuvxc4.png" />
+      <img src="https://flic.kr/p/dzQ4LB" />
     </li>
     <li>
-      <img src="https://i.imgur.com/d8tDH2m.png" />
+      <img src="https://flic.kr/p/otgGuL" />
     </li>
   </ul>
 </div>
+<script language="javascript">
+
+window.onload = function () {
+	var w = document.getElementById("slider1").parent().width();
+	document.getElementById("slider1").style.width = w + 72;
+//	document.getElementById("wpadminbar").style.width = w;
+	 }
+
+</script>
 
 <?php 
 //		if ( function_exists( 'easingslider' ) ) 
@@ -86,3 +84,4 @@
 ?>
 
 	<div id="content" class="site-content">
+    
