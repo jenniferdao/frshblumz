@@ -14,6 +14,18 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div id="footer-widgets">
+	            <?php if ( is_active_sidebar( 'footer' ) ) : ?>
+	                <aside id="widget-foot" class="widget-foot">
+	                    <?php dynamic_sidebar( 'footer' ); ?>
+	                </aside>
+	            <?php endif; ?>
+	        </div><!-- end #footer-widgets -->
+
+			<div id="footer-menu">
+				<?php wp_nav_menu ( array('theme_location'=> 'secondary', 'menu_class' =>'foot-menu'));
+				?> 
+			</div><!--#footer-menu-->
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'frshblumz' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'frshblumz' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
