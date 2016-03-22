@@ -63,7 +63,10 @@ padding-left: 20px;
 background-image: url("images/floralpattern.jpg");
 }
 
-
+#primary
+{
+padding-left: 10px;
+padding-right: 10px;
 }
 
 article,
@@ -275,7 +278,8 @@ th {
 /*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Mate);
+@import url(https://fonts.googleapis.com/css?family=Delius+Unicase);
+
 body,
 button,
 input,
@@ -287,19 +291,21 @@ textarea {
 }
 h1 {
 	font-size: 10px;
-	font-family: 'Century Gothic', sans-serif;
+	font-family: 'Delius Unicase', cursive;
 	}
 
 
 h2 .widget-title{
 	font-size: 10px;
 }
-h3,
+h3 {
+	font-family: 'Delius Unicase', cursive;
+}
 h4,
 h5,
 h6 {
 	clear: right; 
-	font-family: 'Mate', serif;
+	font-family: 'Delius Unicase', cursive;
 }
 p {
 	margin-bottom: 1.5em;
@@ -345,9 +351,12 @@ html {
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*:after { 
+/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
+
+
 /* This is the default colour for the background of the body if there is no custom colour defined */
 body {
   	background: #FAFAFA; /* For browsers that do not support gradients */
@@ -418,45 +427,45 @@ table {
 #gridcontainer {
 margin: 20px 0; 
 width: 100%; 
+text-align: center;
 }
-/* This is for the grid layout title styling */
+
 #gridcontainer h2 a {
 color: #000000; 
-font-size: 20px;
-font-family: "Century Gothic", sans-serif;
+font-size: 18px;
+font-family: "Delius Unicase", cursive;
+text-align: center;
 }
-/* This styling is for the grid items placed on the left side */
+
 #gridcontainer .griditemleft {
 float: left; 
 width: 278px;
 border-bottom-width: 5px;
 border-top-width: 5px;
 border-style: groove;
-background-color: #a8a8a8;
+background-color: #ecb3ff;
 height: 300px;
 margin: 0 30px 30px 0;
 padding: 4px;
 }
-/* This styling is for the grid items placed on the right side */
+
 #gridcontainer .griditemright {
 float: left; 
 width: 278px;
 border-bottom-width: 5px;
 border-top-width: 5px;
 border-style: groove;
-background-color: #a8a8a8;
+background-color: #ecb3ff;
 height: 300px;
 margin: 0 30px 30px 0;
 padding: 4px;
-
 }
 
 #gridcontainer .postimage {
 margin: 0 0 10px 0;
 }
-/* Width is set to 100% to ensure it is responsive */
-.attachment-category-thumbnail.size-category-thumbnail.wp-post-image
-{
+
+.attachment-category-thumbnail.size-category-thumbnail.wp-post-image{
 max-width: 100%;
 }
 
@@ -465,7 +474,7 @@ max-width: 100%;
 float: none;
 display: inline-block;
 width: 100%;
-border-style: grove solid;
+border-style: groove solid;
 }
 
 
@@ -489,9 +498,10 @@ input[type="submit"] {
     border-radius: 2px;
     cursor: pointer; 
 /* Improves usability and consistency of cursor style between image-type 'input' and others */
-    -webkit-appearance: button;
+    -webkit-appearance: button; 
 /* Corrects inability to style clickable 'input' types in iOS */
 }
+
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -499,6 +509,7 @@ input[type="submit"]:hover {
     background: #000;
     background: hsl(0, 0%, 0%);
 }
+
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -531,25 +542,24 @@ textarea {
 --------------------------------------------------------------*/
 a {
     text-decoration: none;	
-    color: #000;
-    color: hsl(0, 0%, 0%);    
+	color: #e52356;
 }
 
 a:visited {
-    color: #333;
-    color: hsl(0, 0%, 20%);
+    color: #97cb0e;
 }
 
 a:hover,
 a:focus,
 a:active { 
     text-decoration: underline; 
+    color: #97cb0e;
+
 }
 
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
-/* Styling for the main navigation menu at the top of the page */
 .main-navigation {
     position: relative;
 	float: left;
@@ -608,6 +618,7 @@ a:active {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
+/* Navigation menu colour and styling */
 .main-navigation ul ul a:hover {
     background: #97cb0e;
     }
@@ -616,103 +627,6 @@ a:active {
 }
 .main-navigation ul ul li:hover > ul {
 	left: 100%;
-}
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_item > a:hover,
-.main-navigation .current-menu-item > a:hover {
-	background: #97cb0e;
-	color: hsl(0, 0%, 19%);
-    	color: #FFCCCC;
-}
-.main-navigation .current_page_ancestor {
-	background: #97cb0e;
-	background: hsl(0, 0%, 30%);
-    
-}
-.main-navigation ul ul .current_page_parent,
-.main-navigation .current_page_parent .current_page_item > a {
-	color: #fff;
-	color: hsl(0, 0%, 100%);
-	background: #97cb0e;
-	
-} 
-/* Primary menu toggle when screen size is reduced to size of a mobile device. */
-.menu-toggle {
-	display: none;
-}
-/*This creates a media query for the menu toggle which makes it responsive by the following style which comes to play when the width of the page is below 600 pixels*/
-@media screen and (max-width: 600px) {
-/* This is the style for the smaller menu button that appears in mobile version */
-.menu-toggle {
-	margin-left: 90px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	font-weight: normal;
-	font-size: 14px;
-	font-size: 1.4rem;
-	display: block;
-	height: 3.75em;
-	padding: 0 1em;
-	text-decoration: none;
-	line-height: 3.75em;
-}
-/* Toggle styling for the smaller menu */ 
-.main-navigation.toggled .nav-menu {
-	display: block;
-	border-top: 1px solid;
-	border-top-color: #fff;
-	border-top-color: hsla(0, 0%, 100%, .5);
-}
-.main-navigation ul {
-	display: none;
-	padding-left: 0;
-}
-        
-.main-navigation li { 
-	float: none; 
-}
-.main-navigation li a { 
-	padding: 1.3em 2em; 
-}
-.main-navigation li li a { 
-	padding-left: 4em; 
-}
-.main-navigation li li li a { 
-	padding-left: 6em; 
-}
-.main-navigation li:hover > a {
-	color: #fff;
-    	color: hsl(0, 0%, 100%);
-   	 background: #e52356;
-    	-webkit-transition-duration: 0.8s;
-/* Retrieved code from w3schools.com */
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-.main-navigation ul ul a:hover {
-    background: #97cb0e;
-    }
-.main-navigation ul li:hover > ul {
-	left: auto;
-}
-.main-navigation ul ul li:hover > ul {
-	left: 100%;
-}	
-.main-navigation ul ul a { 
-	width: 100%; 
-}
-.main-navigation ul a:hover,
-.main-navigation ul ul a:hover {
-	background: #e52356;
-	background: hsl(0, 0%, 30%);
-}
-.main-navigation .current_page_ancestor { 
-	background: inherit; 
-}
-.main-navigation ul ul .current_page_parent {
-	color: inherit;
-	background: inherit;
 }
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
@@ -736,6 +650,88 @@ a:active {
 /* Primary menu toggle when screen size is reduced to size of a mobile device. */
 .menu-toggle {
 	display: none;
+}
+/* This creates a media query for the menu toggle which makes it responsive by the following style which comes to play when the width of the page is below 600 pixels */
+@media screen and (max-width: 600px) {
+/* This is the style for the smaller menu button that appears in mobile version */
+.menu-toggle {
+	margin-left: 80px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: normal;
+	font-size: 11px;
+	font-size: 1.1rem;
+	display: block;
+	height: 3.50em;
+	padding: 0 1em;
+	text-decoration: none;
+	line-height: 3.75em;
+	color: #333;
+	background-color: #e52356;
+}
+
+.menu-toggle a:hover{
+	background: #97cb0e;
+}
+        
+.main-navigation.toggled .nav-menu {
+	display: block;
+	border-top: 1px solid;
+	border-top-color: #97cb0e;
+	border-top-color: hsla(0, 0%, 100%, .5);
+}
+.main-navigation ul {
+	display: none;
+	padding-left: 0;
+}
+        
+.main-navigation li { 
+	float: none; 
+}
+.main-navigation li a { 
+	padding: 1.3em 2em; 
+}
+.main-navigation li li a { 
+	padding-left: 4em; 
+}
+.main-navigation li li li a { 
+	padding-left: 6em; 
+}
+.main-navigation li:hover > a {
+	color: #97cb0e;
+   	background: #e52356;
+    	-webkit-transition-duration: 0.8s;
+/* Retrieved code from w3schools.com */
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+	
+.main-navigation ul ul a { 
+	width: 100%; 
+}
+.main-navigation ul a:hover,
+.main-navigation ul ul a:hover {
+	background: #ec3565;
+}
+.main-navigation .current_page_ancestor { 
+	background: inherit; 
+}
+.main-navigation ul ul .current_page_parent {
+	color: inherit;
+	background: inherit;
+}
+.main-navigation .current_page_item > a,
+.main-navigation .current_page_item > a:hover,
+.main-navigation .current_page_item li:hover,
+.main-navigation .current_page_parent .current_page_item > a  {
+	color: #fff;
+	color: hsl(0, 0%, 100%);
+	background: #97cb0e;
+ 
+}        
+}
+
+
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
@@ -1190,7 +1186,7 @@ object {
 /*--------------------------------------------------------------
  14.0 Footer
 --------------------------------------------------------------*/
-/* This is the page footer style */
+
 .site-footer {
     padding: 0.5em;
     font-family: "Century Gothic", sans-serif;
@@ -1202,22 +1198,26 @@ object {
     text-align: center;
     display: in-line;
 
+
 }
 
+#colophon.site-footer {
+ margin-left: -20px;
+ }
+
 .site-footer a {
-    color: #fff;
+    color: #97cb0e;
     color: hsl(0, 0%, 100%);
 }
-/* For the footer widget menu option if the user desires to have one */
 #footer-menu ul li{
 	display: inline-block;
 }
-/* This is for the website menu appearing in the bottom footer */
 .foot-menu a{
-	border-right: 2px solid #ffffff;
+	border-right: 2px solid #97cb0e;
 	padding: 0 0.5em 0 0.5em;
 }
-/* Displays the website information such as Powered by and credits to theme creator(s) */
+	
+
 .site-info { 
     text-align: center; 
 }
@@ -1231,3 +1231,6 @@ text-align: center;
 	margin: auto; 
 	text-align: center;
 	}
+
+
+
