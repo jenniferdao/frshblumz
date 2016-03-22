@@ -95,6 +95,31 @@ function frshblumz_content_width() {
 }
 add_action( 'after_setup_theme', 'frshblumz_content_width', 0 );
 
+/*
+*Adjust the excerpt length to return only 10 words.
+*/
+function excerpt_length($length) {
+	return 10;
+}
+add_filter('excerpt_length', 'excerpt_length', 999);
+
+/*
+*Set the 'Read More' text as 'Learn More'.
+*/
+function excerpt_more($more) {
+	return 'Learn More';
+}
+add_filter('excerpt_more', 'excerpt_more');
+
+/*
+*Set up the 'Read More' button so that by clicking it, you are sent to the post.
+*/
+function new_excerpt_more( $more ) {
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('', 'tbn') . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
 /**
  * Register widget area.
  *
@@ -126,8 +151,61 @@ function frshblumz_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+//Enqueue the flexslider js.
+	wp_enqueue_script('flexslider', get_stylesheet_directory_uri() .'/js/jquery.flexslider-min.js',
+		 array(
+		 	'jquery'), 
+		 	'2.0.4',
+		 	true);
+
+	//Enqueue my-scripts to remove conflict.
+	wp_enqueue_script('my-scripts', get_stylesheet_directory_uri() . '/js/scripts.js',
+		array(
+			'jquery'),
+			'1.0.0',
+			true);
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}	
+		
 }
 add_action( 'wp_enqueue_scripts', 'frshblumz_scripts' );
+
+/*
+*Register the custom post type for the slider. This will also add an array of settings to the new custom post type.
+*/
+add_action('init','register_my_post_types');
+function register_my_post_types() {
+	register_post_type('slides',
+		array(
+			'labels' => array(
+				'name' => ('Slides'),
+				'singular_name' => 'Promoted Slide',
+				'add_new' => 'Add New Slide',
+				'add_new_item' => 'Add New Post',
+				'edit_item' => 'Edit Slide',
+				'new_item' => 'New Slide',
+				'all_items' => 'All Slides',
+				'view_items' => 'View Slides',
+				'search_items' => 'Search Slides',
+				'not_found' => 'No Slides found',
+				'not_found_in_trash' => 'No Slides found in Trash',
+				'parent_item_colon' => '',
+				),
+			'public' => true,
+			'exclude_from_search' => true,
+			//Enables the post to support a title, thumbnail and editor.
+			'supports' => array(
+				'title',
+				'thumbnail',
+				'editor'
+				)
+			)
+		);
+}
+
 
 /**
  * Implement the Custom Header feature.
