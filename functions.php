@@ -250,3 +250,29 @@ wp_enqueue_script( 'frshblumz-flexslider.js', get_stylesheet_directory_uri() . '
         wp_enqueue_script( 'flex-script', get_template_directory_uri() .  '/frshblumz/js/jquery.flexslider-min.js', array( 'jquery' ), false, true );
     }
     add_action( 'wp_enqueue_scripts', 'wptuts_slider_scripts' );
+
+function my_phpalert($text)
+{
+	echo '<script language="javascript">alert("'.$text.'")</script>';
+}
+
+function my_customize()
+{
+	$background = isset($_POST['background']) ? $_POST['background'] : '#000000';
+	my_phpalert($background);
+	setcookie( 'background', $background, time() + 3600*24*365, COOKIEPATH, COOKIE_DOMAIN );
+	
+	if(isset($_POST['submit']))
+	{
+		exit();
+		header('Location: '.$_SERVER['HTTP_REFERER']) or die();	//
+	}
+}
+add_shortcode( 'mycustomize', 'my_customize' );
+
+function my_home()	
+{
+	header('Location: https://phoenix.sheridanc.on.ca/~ccit3430');
+}
+
+add_shortcode( 'gohome', 'my_home' );
