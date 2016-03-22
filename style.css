@@ -692,7 +692,15 @@ a:active {
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-	
+.main-navigation ul ul a:hover {
+    background: #97cb0e;
+    }
+.main-navigation ul li:hover > ul {
+	left: auto;
+}
+.main-navigation ul ul li:hover > ul {
+	left: 100%;
+}	
 .main-navigation ul ul a { 
 	width: 100%; 
 }
@@ -709,17 +717,27 @@ a:active {
 	background: inherit;
 }
 .main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
 .main-navigation .current_page_item > a:hover,
-.main-navigation .current_page_item li:hover,
-.main-navigation .current_page_parent .current_page_item > a  {
-	color: #fff;
-	color: hsl(0, 0%, 100%);
-	background: #4d4d4d;
-	background: hsl(0, 0%, 30%);    
-}        
+.main-navigation .current-menu-item > a:hover {
+	background: #97cb0e;
+    color: #333;
+    	
 }
-
-
+.main-navigation .current_page_ancestor {
+	background: #97cb0e;
+	background: hsl(0, 0%, 30%);
+    
+}
+.main-navigation ul ul .current_page_parent,
+.main-navigation .current_page_parent .current_page_item > a {
+	color: #fff;
+	background: #97cb0e;
+	
+} 
+/* Primary menu toggle when screen size is reduced to size of a mobile device. */
+.menu-toggle {
+	display: none;
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
