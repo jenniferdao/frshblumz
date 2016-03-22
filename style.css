@@ -348,8 +348,6 @@ html {
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
-
-
 /* This is the default colour for the background of the body if there is no custom colour defined */
 body {
   	background: #FAFAFA; /* For browsers that do not support gradients */
@@ -417,18 +415,17 @@ table {
 }
 
 /* Code for making the grid layout, retrieved from codex online */
-
 #gridcontainer {
 margin: 20px 0; 
 width: 100%; 
 }
-
+/* This is for the grid layout title styling */
 #gridcontainer h2 a {
 color: #000000; 
 font-size: 20px;
 font-family: "Century Gothic", sans-serif;
 }
-
+/* This styling is for the grid items placed on the left side */
 #gridcontainer .griditemleft {
 float: left; 
 width: 278px;
@@ -439,10 +436,8 @@ background-color: #a8a8a8;
 height: 300px;
 margin: 0 30px 30px 0;
 padding: 4px;
-
-
 }
-
+/* This styling is for the grid items placed on the right side */
 #gridcontainer .griditemright {
 float: left; 
 width: 278px;
@@ -459,7 +454,7 @@ padding: 4px;
 #gridcontainer .postimage {
 margin: 0 0 10px 0;
 }
-
+/* Width is set to 100% to ensure it is responsive */
 .attachment-category-thumbnail.size-category-thumbnail.wp-post-image
 {
 max-width: 100%;
@@ -492,8 +487,10 @@ input[type="submit"] {
     background: hsl(0, 0%, 24%);
     border: none;
     border-radius: 2px;
-    cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-    -webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+    cursor: pointer; 
+/* Improves usability and consistency of cursor style between image-type 'input' and others */
+    -webkit-appearance: button;
+/* Corrects inability to style clickable 'input' types in iOS */
 }
 button:hover,
 input[type="button"]:hover,
@@ -552,6 +549,7 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+/* Styling for the main navigation menu at the top of the page */
 .main-navigation {
     position: relative;
 	float: left;
@@ -645,6 +643,7 @@ a:active {
 }
 /*This creates a media query for the menu toggle which makes it responsive by the following style which comes to play when the width of the page is below 600 pixels*/
 @media screen and (max-width: 600px) {
+/* This is the style for the smaller menu button that appears in mobile version */
 .menu-toggle {
 	margin-left: 90px;
 	margin-top: 5px;
@@ -657,9 +656,8 @@ a:active {
 	padding: 0 1em;
 	text-decoration: none;
 	line-height: 3.75em;
-
 }
-        
+/* Toggle styling for the smaller menu */ 
 .main-navigation.toggled .nav-menu {
 	display: block;
 	border-top: 1px solid;
@@ -1192,7 +1190,7 @@ object {
 /*--------------------------------------------------------------
  14.0 Footer
 --------------------------------------------------------------*/
-
+/* This is the page footer style */
 .site-footer {
     padding: 0.5em;
     font-family: "Century Gothic", sans-serif;
@@ -1210,15 +1208,16 @@ object {
     color: #fff;
     color: hsl(0, 0%, 100%);
 }
+/* For the footer widget menu option if the user desires to have one */
 #footer-menu ul li{
 	display: inline-block;
 }
+/* This is for the website menu appearing in the bottom footer */
 .foot-menu a{
 	border-right: 2px solid #ffffff;
 	padding: 0 0.5em 0 0.5em;
 }
-	
-
+/* Displays the website information such as Powered by and credits to theme creator(s) */
 .site-info { 
     text-align: center; 
 }
@@ -1232,6 +1231,3 @@ text-align: center;
 	margin: auto; 
 	text-align: center;
 	}
-
-
-
