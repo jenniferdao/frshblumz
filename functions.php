@@ -48,6 +48,7 @@ function frshblumz_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'frshblumz' ),
+		'footer' => esc_html__( 'Footer', 'frshblumz' ),
 	) );
 
 	/*
@@ -232,6 +233,8 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/** Load the options pages.
+*/
 
 
 /*this function creates a flexslider on the home page, retrieved from http://flexslider.woothemes.com */
