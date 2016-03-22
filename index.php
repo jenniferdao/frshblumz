@@ -22,9 +22,9 @@ get_header(); ?>
 	$counter = 1; //start counter
 	$grids = 4; //Grids per row
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	$args = array('posts_per_page' => 5, 'paged' => $paged, 'cat'=>30 );
+	$args = array('posts_per_page' => 8, 'paged' => $paged, 'cat'=>30 );
 	
-	query_posts( 'category_name=Markup&posts_per_page=5&paged=' . $paged ); 
+	query_posts( 'category_name=Markup&posts_per_page=8&paged=' . $paged ); 
 	if(have_posts()) :  while(have_posts()) :  the_post();
 ?>
 <?php
